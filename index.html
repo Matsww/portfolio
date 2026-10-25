@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mats Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one narrow left-pinned text column, alexoak structure; monochrome, zero radius, no shadows (Bpowell). */
+:root {
+  --bg: #ffffff;
+  --fg: #111111;
+  --muted: #6b6b6b;
+  --rule: #e6e6e6;
+  --bar-empty: #cfcfcf;
+  --sans: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #111111; --fg: #f2f2f2; --muted: #9a9a9a; --rule: #2b2b2b; --bar-empty: #444444; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #111111; --fg: #f2f2f2; --muted: #9a9a9a; --rule: #2b2b2b; --bar-empty: #444444; color-scheme: dark; }
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap {
+  max-width: 620px;
+  padding-block: 72px 96px;
+  padding-left: max(24px, env(safe-area-inset-left, 0px));
+  padding-right: max(24px, env(safe-area-inset-right, 0px));
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+@media (min-width: 900px) { .wrap { margin-left: 8vw; padding-block: 120px 120px; } }
+
+h1 { font-size: 2rem; font-weight: 600; letter-spacing: -0.03em; line-height: 1.1; margin: 0; text-wrap: balance; }
+.intro { margin: 8px 0 0; color: var(--muted); }
+h2 {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin: 0 0 16px;
+}
+section { min-width: 0; }
+
+.timeline { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.timeline li { display: grid; grid-template-columns: 5.5rem 1fr; gap: 16px; align-items: baseline; }
+.timeline .yr { font-family: var(--mono); font-size: 0.875rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.timeline .what { min-width: 0; }
+.timeline .note { color: var(--muted); }
+
+.progress { margin-top: 6px; font-family: var(--mono); font-size: 0.875rem; white-space: nowrap; overflow-x: auto; }
+.progress .empty { color: var(--bar-empty); }
+.progress .pct { color: var(--muted); margin-left: 8px; }
+
+ul.goals { margin: 0; padding: 0 0 0 1.1em; display: flex; flex-direction: column; gap: 6px; }
+ul.goals li::marker { color: var(--muted); }
+
+.contact { display: flex; flex-wrap: wrap; gap: 8px 24px; }
+a { color: var(--fg); text-decoration: underline; text-decoration-color: var(--bar-empty); text-underline-offset: 3px; transition: text-decoration-color .15s; }
+a:hover { text-decoration-color: var(--fg); }
+a:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
+.mono { font-family: var(--mono); font-size: 0.875rem; }
+
+@media (max-width: 420px) {
+  .timeline li { grid-template-columns: 1fr; gap: 0; }
+}
+@media (prefers-reduced-motion: reduce) { a { transition: none; } }
+</style>
+</head>
+<body>
+
+<main class="wrap">
+  <header>
+    <h1>Mats</h1>
+    <p class="intro">[age] years old, [City], [Country] 🌍</p>
+  </header>
+
+  <section aria-labelledby="journey">
+    <h2 id="journey">Journey</h2>
+    <ol class="timeline">
+      <li><span class="yr">2020</span><span class="what">First project <span class="note">(placeholder)</span></span></li>
+      <li><span class="yr">2021</span><span class="what">Studied [subject] at [school]</span></li>
+      <li><span class="yr">2022</span><span class="what">Built [product] <span class="note">([users / revenue])</span></span></li>
+      <li><span class="yr">2023</span><span class="what">Joined / founded [company]</span></li>
+      <li><span class="yr">2024</span><span class="what">Shipped [project] <span class="note">([result])</span></span></li>
+      <li><span class="yr">2025</span><span class="what">[Milestone]</span></li>
+      <li><span class="yr">2026 Q4</span><span class="what">Road to [current goal]
+        <div class="progress" aria-label="Progress 24 percent">██████<span class="empty">░░░░░░░░░░░░░░░░░░░</span><span class="pct">(24%)</span></div>
+      </span></li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="goals">
+    <h2 id="goals">Long-term goals</h2>
+    <ul class="goals">
+      <li>[Big goal one]</li>
+      <li>[Big goal two]</li>
+      <li>[Something personal]</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="contact">
+    <h2 id="contact">Contact</h2>
+    <div class="contact">
+      <a href="https://x.com/" target="_blank" rel="noopener">X</a>
+      <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+      <span class="mono">you@example.com</span>
+    </div>
+  </section>
+</main>
+</body>
+</html>
