@@ -38,6 +38,7 @@ body {
 }
 .wrap {
   max-width: 620px;
+  margin-inline: auto;
   padding-block: 72px 96px;
   padding-left: max(24px, env(safe-area-inset-left, 0px));
   padding-right: max(24px, env(safe-area-inset-right, 0px));
@@ -45,7 +46,7 @@ body {
   flex-direction: column;
   gap: 48px;
 }
-@media (min-width: 900px) { .wrap { margin-left: 8vw; padding-block: 120px 120px; } }
+@media (min-width: 900px) { .wrap { padding-block: 120px 120px; } }
 
 h1 { font-size: 2rem; font-weight: 600; letter-spacing: -0.03em; line-height: 1.1; margin: 0; text-wrap: balance; }
 .intro { margin: 8px 0 0; color: var(--muted); }
