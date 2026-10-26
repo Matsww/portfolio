@@ -13,18 +13,16 @@
 <style>
 /* Layout: one narrow left-pinned text column, alexoak structure; monochrome, zero radius, no shadows (Bpowell). */
 :root {
-  --bg: #ffffff;
-  --fg: #111111;
-  --muted: #6b6b6b;
-  --rule: #e6e6e6;
-  --bar-empty: #cfcfcf;
+  --bg: #dbd7d3;        /* Bone */
+  --fg: #2b2b2b;        /* Inkstone */
+  --muted: #535251;     /* Graphite */
+  --accent: #82887c;    /* Sage Stone */
+  --rule: #cdc0b1;      /* Linen */
+  --bar-empty: #c9c8c9; /* Frost */
   --sans: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  color-scheme: light;
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) { --bg: #111111; --fg: #f2f2f2; --muted: #9a9a9a; --rule: #2b2b2b; --bar-empty: #444444; color-scheme: dark; }
-}
-:root[data-theme="dark"] { --bg: #111111; --fg: #f2f2f2; --muted: #9a9a9a; --rule: #2b2b2b; --bar-empty: #444444; color-scheme: dark; }
 
 * { box-sizing: border-box; }
 body { margin: 0; }
@@ -59,7 +57,7 @@ h2 {
   color: var(--muted);
   margin: 0 0 16px;
 }
-section { min-width: 0; }
+section { min-width: 0; padding-top: 20px; border-top: 1px solid var(--rule); }
 
 .timeline { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
 .timeline li { display: grid; grid-template-columns: 5.5rem 1fr; gap: 16px; align-items: baseline; }
@@ -68,6 +66,7 @@ section { min-width: 0; }
 .timeline .note { color: var(--muted); }
 
 .progress { margin-top: 6px; font-family: var(--mono); font-size: 0.875rem; white-space: nowrap; overflow-x: auto; }
+.progress .fill { color: var(--accent); }
 .progress .empty { color: var(--bar-empty); }
 .progress .pct { color: var(--muted); margin-left: 8px; }
 
@@ -75,7 +74,7 @@ ul.goals { margin: 0; padding: 0 0 0 1.1em; display: flex; flex-direction: colum
 ul.goals li::marker { color: var(--muted); }
 
 .contact { display: flex; flex-wrap: wrap; gap: 8px 24px; }
-a { color: var(--fg); text-decoration: underline; text-decoration-color: var(--bar-empty); text-underline-offset: 3px; transition: text-decoration-color .15s; }
+a { color: var(--fg); text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 3px; transition: text-decoration-color .15s; }
 a:hover { text-decoration-color: var(--fg); }
 a:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
 .mono { font-family: var(--mono); font-size: 0.875rem; }
@@ -104,7 +103,7 @@ a:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
       <li><span class="yr">2024</span><span class="what">Shipped [project] <span class="note">([result])</span></span></li>
       <li><span class="yr">2025</span><span class="what">[Milestone]</span></li>
       <li><span class="yr">2026 Q4</span><span class="what">Road to [current goal]
-        <div class="progress" aria-label="Progress 24 percent">██████<span class="empty">░░░░░░░░░░░░░░░░░░░</span><span class="pct">(24%)</span></div>
+        <div class="progress" aria-label="Progress 24 percent"><span class="fill">██████</span><span class="empty">░░░░░░░░░░░░░░░░░░░</span><span class="pct">(24%)</span></div>
       </span></li>
     </ol>
   </section>
