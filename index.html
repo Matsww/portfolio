@@ -90,7 +90,7 @@ a:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
 <main class="wrap">
   <header>
     <h1>Mats</h1>
-    <p class="intro">[age] years old, [City], [Country] 🌍</p>
+    <p class="intro"><span id="age" data-birthday="2004-12-09">21</span> years old, [City], [Country] 🌍</p>
   </header>
 
   <section aria-labelledby="journey">
@@ -126,5 +126,17 @@ a:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
     </div>
   </section>
 </main>
+
+<script>
+  // Keep the age current from the birthday, so it ticks over on 9 December each year.
+  (function () {
+    var el = document.getElementById("age");
+    var b = el.dataset.birthday.split("-").map(Number);
+    var now = new Date();
+    var age = now.getFullYear() - b[0];
+    if (now.getMonth() + 1 < b[1] || (now.getMonth() + 1 === b[1] && now.getDate() < b[2])) age--;
+    el.textContent = age;
+  })();
+</script>
 </body>
 </html>
