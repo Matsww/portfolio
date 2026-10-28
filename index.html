@@ -65,6 +65,7 @@ section { min-width: 0; padding-top: 20px; border-top: 1px solid var(--rule); }
 .timeline li { display: grid; grid-template-columns: 4.5rem 1fr; gap: 12px; align-items: baseline; }
 .timeline .yr { font-family: var(--mono); font-size: 1rem; color: var(--purple); font-variant-numeric: tabular-nums; }
 .timeline .what { min-width: 0; }
+.timeline li.same-period { margin-top: -8px; } /* second event in the same quarter sits tight under the first */
 .timeline .note { color: var(--muted); }
 
 .progress { margin-top: 6px; font-family: var(--mono); font-size: 0.875rem; white-space: nowrap; overflow-x: auto; }
@@ -105,9 +106,9 @@ a:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
       <li><span class="yr">2024</span><span class="what">Pitched FIFA</span></li>
       <li><span class="yr">2025</span><span class="what">Secured FIFA licence <span class="note">(youngest FIFA licensee)</span></span></li>
       <li><span class="yr">2026 Q2</span><span class="what">Hosted the FIFA World Cup on Roblox</span></li>
-      <li><span class="yr"></span><span class="what">Graduated KCL, BSc Business Management <span class="note">(top 5% every year)</span></span></li>
+      <li class="same-period"><span class="yr"></span><span class="what">Graduated KCL, BSc Business Management <span class="note">(top 5% every year)</span></span></li>
       <li><span class="yr">2026 Q3</span><span class="what">Won Best Sports Game at the RIAs</span></li>
-      <li><span class="yr"></span><span class="what">Started Imperial MSc ESB</span></li>
+      <li class="same-period"><span class="yr"></span><span class="what">Started Imperial MSc ESB</span></li>
     </ol>
   </section>
 
