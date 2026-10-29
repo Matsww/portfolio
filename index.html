@@ -108,20 +108,8 @@ a:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
   flex-direction: column;
   justify-content: flex-end;
   gap: 2px;
-  text-decoration: none;
   color: var(--fg);
-  position: relative;
   will-change: transform;
-}
-.clip::before { /* play mark */
-  content: "";
-  position: absolute;
-  top: 50%; left: 50%;
-  translate: -40% -50%;
-  border-style: solid;
-  border-width: 9px 0 9px 15px;
-  border-color: transparent transparent transparent var(--muted);
-  opacity: .6;
 }
 .clip .views { font-family: var(--mono); font-size: 0.875rem; font-variant-numeric: tabular-nums; }
 .clip .cap { font-size: 0.8125rem; line-height: 1.35; color: var(--muted); }
@@ -170,14 +158,14 @@ a:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
   <section aria-labelledby="videos">
     <h2 id="videos">Viral videos</h2>
     <div class="reel" id="reel">
-      <a class="clip" href="https://www.tiktok.com/" target="_blank" rel="noopener"><span class="views">[views]</span><span class="cap">[Video 1 caption]</span></a>
-      <a class="clip" href="https://www.tiktok.com/" target="_blank" rel="noopener"><span class="views">[views]</span><span class="cap">[Video 2 caption]</span></a>
-      <a class="clip" href="https://www.tiktok.com/" target="_blank" rel="noopener"><span class="views">[views]</span><span class="cap">[Video 3 caption]</span></a>
-      <a class="clip" href="https://www.tiktok.com/" target="_blank" rel="noopener"><span class="views">[views]</span><span class="cap">[Video 4 caption]</span></a>
-      <a class="clip" href="https://www.tiktok.com/" target="_blank" rel="noopener"><span class="views">[views]</span><span class="cap">[Video 5 caption]</span></a>
-      <a class="clip" href="https://www.tiktok.com/" target="_blank" rel="noopener"><span class="views">[views]</span><span class="cap">[Video 6 caption]</span></a>
-      <a class="clip" href="https://www.tiktok.com/" target="_blank" rel="noopener"><span class="views">[views]</span><span class="cap">[Video 7 caption]</span></a>
-      <a class="clip" href="https://www.tiktok.com/" target="_blank" rel="noopener"><span class="views">[views]</span><span class="cap">[Video 8 caption]</span></a>
+      <div class="clip"><span class="views">[views]</span><span class="cap">[Video 1 caption]</span></div>
+      <div class="clip"><span class="views">[views]</span><span class="cap">[Video 2 caption]</span></div>
+      <div class="clip"><span class="views">[views]</span><span class="cap">[Video 3 caption]</span></div>
+      <div class="clip"><span class="views">[views]</span><span class="cap">[Video 4 caption]</span></div>
+      <div class="clip"><span class="views">[views]</span><span class="cap">[Video 5 caption]</span></div>
+      <div class="clip"><span class="views">[views]</span><span class="cap">[Video 6 caption]</span></div>
+      <div class="clip"><span class="views">[views]</span><span class="cap">[Video 7 caption]</span></div>
+      <div class="clip"><span class="views">[views]</span><span class="cap">[Video 8 caption]</span></div>
     </div>
   </section>
 
@@ -213,7 +201,6 @@ a:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
       originals.forEach(function (c) {
         var copy = c.cloneNode(true);
         copy.setAttribute("aria-hidden", "true");
-        copy.tabIndex = -1;
         reel.appendChild(copy);
       });
     });
