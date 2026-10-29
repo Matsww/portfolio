@@ -87,18 +87,19 @@ a:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
 .mono { font-family: var(--mono); font-size: 0.875rem; }
 
 /* Video reel: breaks out of the column to the screen edges; first card lines up with the text. */
+.reels { display: flex; flex-direction: column; gap: 10px; }
 .reel {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   margin-inline: calc(50% - 50vw);
-  padding: 8px calc(50vw - 50%) 16px;
+  padding: 4px calc(50vw - 50%);
   overflow-x: auto;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
 }
 .reel::-webkit-scrollbar { display: none; }
 .clip {
-  flex: 0 0 115px;
+  flex: 0 0 104px;
   aspect-ratio: 3 / 4;
   max-width: 100%;
   border-radius: 6px;
@@ -107,7 +108,7 @@ a:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
   will-change: transform;
 }
 .clip img { display: block; width: 100%; height: 100%; object-fit: cover; }
-@media (max-width: 420px) { .clip { flex-basis: 100px; } }
+@media (max-width: 420px) { .clip { flex-basis: 88px; } }
 
 @media (max-width: 420px) {
   .timeline li { grid-template-columns: 1fr; gap: 0; }
@@ -150,19 +151,86 @@ a:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
 
   <section aria-labelledby="videos">
     <h2 id="videos">Viral videos</h2>
-    <div class="reel" id="reel">
-      <div class="clip"><img src="videos/v01.jpg" alt="" width="197" height="263" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v02.jpg" alt="" width="197" height="263" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v03.jpg" alt="" width="197" height="263" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v04.jpg" alt="" width="197" height="263" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v05.jpg" alt="" width="197" height="263" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v06.jpg" alt="" width="197" height="263" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v07.jpg" alt="" width="197" height="263" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v08.jpg" alt="" width="197" height="263" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v09.jpg" alt="" width="197" height="263" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v10.jpg" alt="" width="197" height="263" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v11.jpg" alt="" width="197" height="263" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v12.jpg" alt="" width="197" height="263" loading="lazy" decoding="async"></div>
+    <div class="reels">
+    <div class="reel">
+      <div class="clip"><img src="videos/v001.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v004.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v007.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v010.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v013.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v016.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v019.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v022.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v025.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v028.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v031.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v034.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v037.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v040.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v043.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v046.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v049.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v052.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v055.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v058.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v061.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v064.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v067.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v070.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v073.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+    </div>
+    <div class="reel" data-dir="-1">
+      <div class="clip"><img src="videos/v002.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v005.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v008.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v011.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v014.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v017.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v020.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v023.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v026.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v029.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v032.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v035.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v038.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v041.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v044.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v047.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v050.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v053.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v056.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v059.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v062.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v065.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v068.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v071.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+    </div>
+    <div class="reel">
+      <div class="clip"><img src="videos/v003.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v006.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v009.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v012.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v015.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v018.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v021.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v024.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v027.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v030.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v033.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v036.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v039.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v042.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v045.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v048.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v051.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v054.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v057.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v060.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v063.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v066.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v069.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v072.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+    </div>
     </div>
   </section>
 
@@ -186,61 +254,67 @@ a:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
 </main>
 
 <script>
-  // Video reel: loops endlessly, cards curve like a drum, and scrolling the page spins it.
+  // Video reels: each row loops endlessly, cards curve like a drum, and scrolling the page spins
+  // the rows, the middle one in the opposite direction.
   (function () {
-    var reel = document.getElementById("reel");
-    var originals = Array.prototype.slice.call(reel.children);
-    var still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (still) return;
-
-    // Three copies side by side, so we can jump between them without a visible seam.
-    [0, 1].forEach(function () {
-      originals.forEach(function (c) {
-        var copy = c.cloneNode(true);
-        copy.setAttribute("aria-hidden", "true");
-        reel.appendChild(copy);
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    var reels = Array.prototype.slice.call(document.querySelectorAll(".reel")).map(function (el) {
+      var originals = Array.prototype.slice.call(el.children);
+      // Three copies side by side, so we can jump between them without a visible seam.
+      [0, 1].forEach(function () {
+        originals.forEach(function (c) {
+          var copy = c.cloneNode(true);
+          copy.setAttribute("aria-hidden", "true");
+          el.appendChild(copy);
+        });
       });
+      return { el: el, n: originals.length, cards: Array.prototype.slice.call(el.children), dir: Number(el.dataset.dir || 1), setWidth: 0, queued: false };
     });
-    var cards = Array.prototype.slice.call(reel.children);
-    var setWidth = 0;
-    function measure() { setWidth = cards[originals.length].offsetLeft - cards[0].offsetLeft; }
 
-    function loop() {
-      if (reel.scrollLeft < setWidth * 0.5) reel.scrollLeft += setWidth;
-      else if (reel.scrollLeft > setWidth * 1.5) reel.scrollLeft -= setWidth;
+    function measure(r) { r.setWidth = r.cards[r.n].offsetLeft - r.cards[0].offsetLeft; }
+    function loop(r) {
+      if (r.el.scrollLeft < r.setWidth * 0.5) r.el.scrollLeft += r.setWidth;
+      else if (r.el.scrollLeft > r.setWidth * 1.5) r.el.scrollLeft -= r.setWidth;
     }
-    function paint() {
-      var r = reel.getBoundingClientRect();
-      var mid = r.left + r.width / 2;
-      var half = Math.min(r.width / 2, 520);
-      cards.forEach(function (c) {
+    function paint(r) {
+      var box = r.el.getBoundingClientRect();
+      if (box.bottom < 0 || box.top > window.innerHeight) return;
+      var mid = box.left + box.width / 2;
+      var half = Math.min(box.width / 2, 520);
+      r.cards.forEach(function (c) {
         var b = c.getBoundingClientRect();
+        if (b.right < box.left - 200 || b.left > box.right + 200) return;
         var t = Math.max(-1, Math.min(1, (b.left + b.width / 2 - mid) / half));
         c.style.transform = "perspective(900px) rotateY(" + (t * 32).toFixed(2) + "deg) scale(" + (1 - Math.abs(t) * 0.1).toFixed(3) + ")";
         c.style.opacity = (1 - Math.abs(t) * 0.45).toFixed(3);
       });
     }
-
-    var queued = false;
-    function update() {
-      if (queued) return;
-      queued = true;
-      requestAnimationFrame(function () { queued = false; loop(); paint(); });
+    function update(r) {
+      if (r.queued) return;
+      r.queued = true;
+      requestAnimationFrame(function () { r.queued = false; loop(r); paint(r); });
     }
 
     var lastY = window.scrollY;
     window.addEventListener("scroll", function () {
       var dy = window.scrollY - lastY;
       lastY = window.scrollY;
-      var r = reel.getBoundingClientRect();
-      if (r.bottom > 0 && r.top < window.innerHeight) reel.scrollLeft += dy * 1.2;
+      reels.forEach(function (r) {
+        var box = r.el.getBoundingClientRect();
+        if (box.bottom > 0 && box.top < window.innerHeight) r.el.scrollLeft += dy * 1.2 * r.dir;
+      });
     }, { passive: true });
-    reel.addEventListener("scroll", update, { passive: true });
-    window.addEventListener("resize", function () { measure(); update(); });
+    reels.forEach(function (r) {
+      r.el.addEventListener("scroll", function () { update(r); }, { passive: true });
+    });
+    window.addEventListener("resize", function () { reels.forEach(function (r) { measure(r); update(r); }); });
 
-    measure();
-    reel.scrollLeft = setWidth;
-    paint();
+    reels.forEach(function (r, i) {
+      measure(r);
+      // Stagger the rows so the columns don't line up.
+      r.el.scrollLeft = r.setWidth + i * 38;
+      paint(r);
+    });
   })();
 </script>
 
