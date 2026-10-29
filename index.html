@@ -89,6 +89,7 @@ a:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
 /* Video reel: breaks out of the column to the screen edges; first card lines up with the text. */
 .reels { display: flex; flex-direction: column; gap: 8px; }
 .reel {
+  position: relative;
   display: flex;
   gap: 8px;
   margin-inline: calc(50% - 50vw);
@@ -153,83 +154,83 @@ a:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
     <h2 id="videos">Viral videos</h2>
     <div class="reels">
     <div class="reel">
-      <div class="clip"><img src="videos/v001.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v004.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v007.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v010.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v013.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v016.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v019.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v022.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v025.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v028.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v031.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v034.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v037.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v040.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v043.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v046.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v049.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v052.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v055.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v058.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v061.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v064.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v067.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v070.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v073.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v001.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v004.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v007.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v010.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v013.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v016.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v019.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v022.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v025.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v028.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v031.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v034.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v037.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v040.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v043.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v046.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v049.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v052.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v055.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v058.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v061.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v064.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v067.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v070.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v073.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
     </div>
     <div class="reel" data-dir="-1">
-      <div class="clip"><img src="videos/v002.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v005.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v008.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v011.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v014.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v017.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v020.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v023.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v026.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v029.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v032.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v035.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v038.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v041.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v044.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v047.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v050.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v053.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v056.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v059.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v062.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v065.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v068.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v071.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v002.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v005.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v008.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v011.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v014.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v017.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v020.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v023.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v026.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v029.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v032.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v035.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v038.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v041.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v044.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v047.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v050.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v053.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v056.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v059.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v062.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v065.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v068.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v071.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
     </div>
     <div class="reel">
-      <div class="clip"><img src="videos/v003.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v006.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v009.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v012.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v015.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v018.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v021.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v024.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v027.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v030.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v033.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v036.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v039.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v042.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v045.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v048.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v051.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v054.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v057.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v060.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v063.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v066.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v069.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
-      <div class="clip"><img src="videos/v072.jpg" alt="" width="193" height="259" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v003.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v006.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v009.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v012.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v015.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v018.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v021.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v024.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v027.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v030.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v033.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v036.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v039.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v042.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v045.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v048.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v051.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v054.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v057.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v060.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v063.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v066.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v069.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
+      <div class="clip"><img src="videos/v072.webp" alt="" width="176" height="236" loading="lazy" decoding="async"></div>
     </div>
     </div>
   </section>
@@ -268,26 +269,30 @@ a:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
           el.appendChild(copy);
         });
       });
-      return { el: el, n: originals.length, cards: Array.prototype.slice.call(el.children), dir: Number(el.dataset.dir || 1), setWidth: 0, queued: false };
+      return { el: el, n: originals.length, cards: Array.prototype.slice.call(el.children), dir: Number(el.dataset.dir || 1), setWidth: 0, centers: [], visible: false, queued: false };
     });
 
-    function measure(r) { r.setWidth = r.cards[r.n].offsetLeft - r.cards[0].offsetLeft; }
+    // Card positions never change while spinning, so read them once (and on resize)
+    // instead of measuring the page on every frame.
+    function measure(r) {
+      r.setWidth = r.cards[r.n].offsetLeft - r.cards[0].offsetLeft;
+      r.centers = r.cards.map(function (c) { return c.offsetLeft + c.offsetWidth / 2; });
+    }
     function loop(r) {
       if (r.el.scrollLeft < r.setWidth * 0.5) r.el.scrollLeft += r.setWidth;
       else if (r.el.scrollLeft > r.setWidth * 1.5) r.el.scrollLeft -= r.setWidth;
     }
     function paint(r) {
-      var box = r.el.getBoundingClientRect();
-      if (box.bottom < 0 || box.top > window.innerHeight) return;
-      var mid = box.left + box.width / 2;
-      var half = Math.min(box.width / 2, 520);
-      r.cards.forEach(function (c) {
-        var b = c.getBoundingClientRect();
-        if (b.right < box.left - 200 || b.left > box.right + 200) return;
-        var t = Math.max(-1, Math.min(1, (b.left + b.width / 2 - mid) / half));
-        c.style.transform = "perspective(900px) rotateY(" + (t * 32).toFixed(2) + "deg) scale(" + (1 - Math.abs(t) * 0.1).toFixed(3) + ")";
-        c.style.opacity = (1 - Math.abs(t) * 0.45).toFixed(3);
-      });
+      var width = r.el.clientWidth;
+      var mid = r.el.scrollLeft + width / 2;
+      var half = Math.min(width / 2, 520);
+      for (var i = 0; i < r.cards.length; i++) {
+        var d = r.centers[i] - mid;
+        if (d < -width || d > width) continue; // off screen, leave it alone
+        var t = Math.max(-1, Math.min(1, d / half));
+        r.cards[i].style.transform = "perspective(900px) rotateY(" + (t * 32).toFixed(2) + "deg) scale(" + (1 - Math.abs(t) * 0.1).toFixed(3) + ")";
+        r.cards[i].style.opacity = (1 - Math.abs(t) * 0.45).toFixed(3);
+      }
     }
     function update(r) {
       if (r.queued) return;
@@ -295,13 +300,20 @@ a:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
       requestAnimationFrame(function () { r.queued = false; loop(r); paint(r); });
     }
 
+    // Only spin rows that are on screen.
+    var watcher = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        reels.forEach(function (r) { if (r.el === e.target) r.visible = e.isIntersecting; });
+      });
+    });
+    reels.forEach(function (r) { watcher.observe(r.el); });
+
     var lastY = window.scrollY;
     window.addEventListener("scroll", function () {
       var dy = window.scrollY - lastY;
       lastY = window.scrollY;
       reels.forEach(function (r) {
-        var box = r.el.getBoundingClientRect();
-        if (box.bottom > 0 && box.top < window.innerHeight) r.el.scrollLeft += dy * 1.2 * r.dir;
+        if (r.visible) r.el.scrollLeft += dy * 1.2 * r.dir;
       });
     }, { passive: true });
     reels.forEach(function (r) {
