@@ -89,7 +89,7 @@ a:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
 /* Video reel: breaks out of the column to the screen edges; first card lines up with the text. */
 .reel {
   display: flex;
-  gap: 14px;
+  gap: 12px;
   margin-inline: calc(50% - 50vw);
   padding: 8px calc(50vw - 50%) 16px;
   overflow-x: auto;
@@ -98,7 +98,7 @@ a:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
 }
 .reel::-webkit-scrollbar { display: none; }
 .clip {
-  flex: 0 0 150px;
+  flex: 0 0 115px;
   aspect-ratio: 3 / 4;
   max-width: 100%;
   border-radius: 6px;
@@ -107,7 +107,7 @@ a:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
   will-change: transform;
 }
 .clip img { display: block; width: 100%; height: 100%; object-fit: cover; }
-@media (max-width: 420px) { .clip { flex-basis: 128px; } }
+@media (max-width: 420px) { .clip { flex-basis: 100px; } }
 
 @media (max-width: 420px) {
   .timeline li { grid-template-columns: 1fr; gap: 0; }
