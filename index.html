@@ -97,6 +97,10 @@ a:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
 .stats div { display: flex; flex-direction: column-reverse; min-width: 0; }
 .stats dd { margin: 0; font-size: 1.375rem; font-weight: 600; letter-spacing: -0.02em; line-height: 1.2; font-variant-numeric: tabular-nums; }
 .stats dt { font-size: 0.8125rem; color: var(--muted); line-height: 1.35; }
+.project + .project { margin-top: 28px; }
+.project h3 { font-size: 1.125rem; font-weight: 600; letter-spacing: -0.01em; line-height: 1.3; margin: 0; }
+.formerly { margin: 2px 0 0; font-size: 0.875rem; color: var(--muted); }
+.project .stats { margin: 14px 0 12px; }
 .reels { display: flex; flex-direction: column; gap: 8px; }
 .reel {
   position: relative;
@@ -153,11 +157,29 @@ a:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
 
   <section aria-labelledby="goals">
     <h2 id="goals">Portfolio</h2>
-    <ul class="goals">
-      <li>[Big goal one]</li>
-      <li>[Big goal two]</li>
-      <li>[Something personal]</li>
-    </ul>
+    <div class="project">
+      <h3>FIFA Super Soccer <img class="icon" src="football.png" alt="" width="21" height="20"></h3>
+      <p class="formerly">Formerly Super League Soccer</p>
+      <dl class="stats">
+        <div><dt>plays</dt><dd>1.6B</dd></div>
+        <div><dt>hours played</dt><dd>21B</dd></div>
+        <div><dt>peak CCU</dt><dd>85K</dd></div>
+        <div><dt>monthly active users</dt><dd>10M+</dd></div>
+      </dl>
+      <ul class="goals">
+        <li>Officially licensed FIFA game</li>
+        <li>Largest-ever branded Roblox game</li>
+        <li>Real-world club IP, including Manchester City and Dortmund</li>
+      </ul>
+    </div>
+    <div class="project">
+      <h3>Other games</h3>
+      <dl class="stats">
+        <div><dt>plays</dt><dd>500M+</dd></div>
+        <div><dt>hours played</dt><dd>7B+</dd></div>
+        <div><dt>games over 10K CCU</dt><dd>3+</dd></div>
+      </dl>
+    </div>
   </section>
 
   <section aria-labelledby="videos">
