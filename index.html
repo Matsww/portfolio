@@ -13,16 +13,19 @@
 <style>
 /* Layout: one narrow left-pinned text column, alexoak structure; monochrome, zero radius, no shadows (Bpowell). */
 :root {
-  --bg: #dbd7d3;        /* Bone */
-  --fg: #2b2b2b;        /* Inkstone */
-  --muted: #535251;     /* Graphite */
-  --accent: #82887c;    /* Sage Stone */
-  --rule: #cdc0b1;      /* Linen */
-  --bar-empty: #c9c8c9; /* Frost */
+  --bg: #ffffff;
+  --fg: #111111;
+  --muted: #6b6b6b;
+  --accent: #111111;
+  --rule: #e6e6e6;
+  --bar-empty: #cfcfcf;
   --sans: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-  color-scheme: light;
 }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #111111; --fg: #f2f2f2; --muted: #9a9a9a; --accent: #f2f2f2; --rule: #2b2b2b; --bar-empty: #444444; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #111111; --fg: #f2f2f2; --muted: #9a9a9a; --accent: #f2f2f2; --rule: #2b2b2b; --bar-empty: #444444; color-scheme: dark; }
 
 * { box-sizing: border-box; }
 body { margin: 0; }
@@ -76,7 +79,7 @@ ul.goals { margin: 0; padding: 0 0 0 1.1em; display: flex; flex-direction: colum
 ul.goals li::marker { color: var(--muted); }
 
 .contact { display: flex; flex-wrap: wrap; gap: 8px 24px; }
-a { color: var(--fg); text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 3px; transition: text-decoration-color .15s; }
+a { color: var(--fg); text-decoration: underline; text-decoration-color: var(--bar-empty); text-underline-offset: 3px; transition: text-decoration-color .15s; }
 a:hover { text-decoration-color: var(--fg); }
 a:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
 .mono { font-family: var(--mono); font-size: 0.875rem; }
